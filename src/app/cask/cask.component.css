@@ -1,0 +1,25 @@
+.negrito{
+    font-weight: bold;
+}
+
+.alinha_cards{
+    padding-inline-start: 0px;
+}
+.alinha_cards li {
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.margem_input{
+    margin-top: 10px;
+}
+
+.card_margem_direito{
+    margin-right: 15px;
+}
+
+.custom_card{
+    border-radius: 8px !important; 
+    width: 220px; 
+    height: 100px;
+}

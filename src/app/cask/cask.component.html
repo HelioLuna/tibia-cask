@@ -1,0 +1,88 @@
+<div class="card">
+
+    <img class="margem_input" style="padding-right: 10px; height: 25px; float: left; margin-top: 25px;" src="assets/images/tibia/tibia-gold.jpg">
+    <h1 class="negrito" style="margin-bottom: 2px;">CASK CALCULATOR </h1>
+    <span style="font-size: small;">Você comprou <b>cask</b>, caçou e agora não sabe calcular o seu gasto? Aqui está a <b>solução</b>.. :)</span>
+
+
+    <br/><br/>
+
+    <label class="negrito">Valor da Tibia Coin (seu servidor) *:  </label>
+    <br/>        
+    <span class="ui-float-label margem_input">
+        <input
+        name="valortc" #quantidade="ngModel"
+        required
+        id="float-input" 
+        type="number" min="0"   
+        pInputText 
+        [(ngModel)]="valortc"> 
+    </span>
+
+    <br/>
+    <label class="negrito">Quantidade de potions *:  </label>
+    <br/>  
+    <span class="ui-float-label margem_input">
+        <input
+        name="valortc" #quantidade="ngModel"
+        required
+        id="float-input" 
+        type="number" min="0"   
+        pInputText 
+        [(ngModel)]="qtdpotion"> 
+    </span>
+
+    <br/>
+    <label class="negrito">Tipo de Potion *:  </label>
+    <br/>
+    <p-dropdown class="alinhar_esquerda margem_input"
+        name="potion" #produto="ngModel"
+        required
+        [options]="potions" 
+        [(ngModel)]="potion" 
+        optionLabel="nome"
+        placeholder="Selecione a potion"></p-dropdown>    
+    <img class="alinhar_esquerda margem_input"style="padding-right: 10px;" src="assets/images/tibia/potions/{{potion.image}}.png">
+
+    <br/><br/><br/>
+    <div>
+        <ul class="alinha_cards">
+            <li>
+                <div class="card  card_margem_direito custom_card" style="background: lightsteelblue;">
+                    <label class="negrito">Valor da Unidade (Potion/Cask):  </label>
+                    <br/>
+                    <span>{{calculaValorUnidade()}}</span>
+                </div>
+            </li>
+            <li>
+                <div class="card  card_margem_direito custom_card" style="background: lightsteelblue;">
+                    <label class="negrito">Valor da Unidade (Potion/NPC):  </label>
+                    <br/>
+                    <span>{{potion.precoUnitario}}</span>
+                </div>
+            </li>
+            <li>
+                <div class="card  card_margem_direito custom_card" style="background: #CD9B9B;">
+                    <label class="negrito">Valor Total das Potions (Cask):  </label>
+                    <br/>
+                    <span>{{calculaValorPotionCask()}}</span>
+                </div>
+            </li>
+            <li>
+                <div class="card  card_margem_direito custom_card" style="background: #CD9B9B;">
+                        <label class="negrito">Valor Total das Potions (NPC):  </label>
+                        <br/>
+                        <span>{{calculaValorPotionNPC()}}</span>
+                </div>
+            </li>
+            <li>
+                <div class="card  card_margem_direito custom_card" style="background: lightgreen;">
+                    <label class="negrito">Profit:  </label>
+                    <br/>
+                    <br/>
+                    <span>{{calculaValorProfit()}}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
