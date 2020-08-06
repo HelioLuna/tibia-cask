@@ -36,7 +36,7 @@ export class CaskComponent implements OnInit {
       {id: 8, nome: 'Ultimate Health Potion', precoUnitario: 379, precoCask: 36, image: 'ultimate_health_potion'},
       {id: 9, nome: 'Supreme Health Potion', precoUnitario: 625, precoCask: 59, image: 'supreme_health_potion'},
       {id: 10, nome: 'Great Spirit Potion', precoUnitario: 228, precoCask: 22, image: 'great_spirit_potion'},
-      {id: 11, nome: 'Ultimate Health Potion', precoUnitario: 438, precoCask: 42, image: 'ultimate_spirit_potion'}
+      {id: 11, nome: 'Ultimate Spirit Potion', precoUnitario: 438, precoCask: 42, image: 'ultimate_spirit_potion'}
     ]
   }
 
